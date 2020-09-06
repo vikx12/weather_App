@@ -4,6 +4,7 @@ const geocode=require('./utils/geocode')
 const hbs=require('hbs');
 const publicDirectoryPath=path.join(__dirname,'../public');
 const vitw=path.join(__dirname,'/templates/views');
+const port=process.env.PORT||3000
 const partialsPath=path.join(__dirname,'/templates/partials');
 hbs.registerPartials(partialsPath);
 const app=express();
@@ -59,6 +60,6 @@ const product={
 }
 console.log(product);
 */
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is up on the port :3000');
 })
